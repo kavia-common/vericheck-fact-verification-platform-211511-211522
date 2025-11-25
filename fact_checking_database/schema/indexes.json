@@ -1,0 +1,21 @@
+{
+  "users": [
+    { "key": { "email": 1 }, "unique": true, "name": "users_email_unique" }
+  ],
+  "claims": [
+    { "key": { "created_at": -1 }, "name": "claims_created_at_desc" },
+    { "key": { "status": 1 }, "name": "claims_status" },
+    { "key": { "user_id": 1, "created_at": -1 }, "name": "claims_user_created_at" }
+  ],
+  "sources": [
+    { "key": { "claim_id": 1 }, "name": "sources_claim_id" },
+    { "key": { "stance": 1, "claim_id": 1 }, "name": "sources_stance_claim" }
+  ],
+  "analyses": [
+    { "key": { "claim_id": 1 }, "name": "analyses_claim_id" },
+    { "key": { "created_at": -1 }, "name": "analyses_created_at_desc" }
+  ],
+  "metrics_daily": [
+    { "key": { "date": 1 }, "unique": true, "name": "metrics_daily_date_unique" }
+  ]
+}

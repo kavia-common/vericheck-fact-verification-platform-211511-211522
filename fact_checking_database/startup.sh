@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # MongoDB startup script following the same pattern
-DB_NAME="myapp"
+DB_NAME="vericheck"
 DB_USER="appuser"
 DB_PASSWORD="dbuser123"
 DB_PORT="5000"
@@ -119,7 +119,7 @@ echo "Connection string saved to db_connection.txt"
 
 # Save environment variables to a file
 cat > db_visualizer/mongodb.env << EOF
-export MONGODB_URL="mongodb://${DB_USER}:${DB_PASSWORD}@localhost:${DB_PORT}/?authSource=admin"
+export MONGODB_URL="mongodb://${DB_USER}:${DB_PASSWORD}@localhost:${DB_PORT}/${DB_NAME}?authSource=admin"
 export MONGODB_DB="${DB_NAME}"
 EOF
 
